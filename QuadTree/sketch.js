@@ -1,5 +1,6 @@
 let tree;
 
+const maxPoints = 2000;
 let startingPoint;
 let selectionRange;
 let selectedPoints = [];
@@ -10,7 +11,7 @@ function setup() {
   let bounds = new Rectangle(0, 0, width, height);
   tree = new QuadTree(bounds, 50);
 
-  for(let i = 0; i < 10000; i++) {
+  for(let i = 0; i < maxPoints; i++) {
     tree.insert(new Point(random(width), random(height)));
   }
 }
